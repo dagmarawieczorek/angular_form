@@ -1,0 +1,9 @@
+<div class="technology-container">
+  <span class="technology">
+    {{technology}}
+  </span>
+
+  <div *ngIf="removable">
+    <button class="remove-technology" prevent-enter-submit (click)="removeTechnology($event)">X</button>
+  </div>
+</div>
