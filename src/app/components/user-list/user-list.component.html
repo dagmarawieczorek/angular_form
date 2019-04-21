@@ -1,0 +1,6 @@
+<div>
+  <h2>User list</h2>
+  <app-user-item *ngFor="let user of users" [user]="user">
+  </app-user-item>
+  <app-add-user (addUser)="addUser($event)"></app-add-user>
+</div>

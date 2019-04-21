@@ -1,0 +1,39 @@
+.user-container{
+    width: 400px;
+    padding: 16px;
+
+    .show-more-info{
+        display:flex;
+    }
+
+    .more-info{
+        padding: 24px;
+        border: 1px solid blue;
+    }
+}
+
+.technologies-container{
+    display:flex;
+    flex-direction:row;
+    padding:4px;
+}
+
+
+.user-header{
+    display:flex;
+    flex-direction:column;
+    padding:8px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 4px;
+    .icon{
+     font-size:24px;  
+    }
+}

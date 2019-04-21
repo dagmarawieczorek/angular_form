@@ -1,0 +1,41 @@
+<div class="user-container">
+
+  <div class="user-header">
+
+    <h4>
+      <mat-icon class="icon">account_circle</mat-icon>
+      {{user.name}}
+      <mat-icon class="icon">edit</mat-icon>
+    </h4>
+
+    <div class="show-more-info">
+      <div class="link" (click)="toggleMoreInfo(user)" *ngIf="!moreInfoVisible">
+        Show more informatios <mat-icon class="icon">expand_more</mat-icon>
+      </div>
+
+      <div class="link" (click)="toggleMoreInfo(user)" *ngIf="moreInfoVisible">
+        Hide informations <mat-icon class="icon">expand_less</mat-icon>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="moreInfoVisible" class="more-info">
+    <span>
+      <h5>Email address</h5>
+      <mat-icon class="icon">email</mat-icon> {{user.email}}
+    </span>
+
+    <h5>Work hours</h5>
+    <span *ngIf="user.any">any hours</span>
+    <span *ngIf="!user.any">
+      start: {{user.startTime}}
+      end: {{user.endTime}}
+    </span>
+    <div class="technologies-container">
+      <app-technologies-item *ngFor="let technology of technologies" [technology]="technology">
+      </app-technologies-item>
+    </div>
+  </div>
+
+
+</div>
