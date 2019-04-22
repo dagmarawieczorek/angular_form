@@ -1,6 +1,6 @@
 <div class="add-user-containter">
   <h2>Add new user</h2>
-  <form class="form" (ngSubmit)="onSubmit()" prevent-enter-submit ngNativeValidate>
+  <form class="form" (ngSubmit)="onSubmit()" ngNativeValidate>
     <h5>Name</h5>
     <input type="text" id="name" name="name" minlength="6" [(ngModel)]="name" placeholder="add name" required>
 
@@ -27,12 +27,12 @@
     </div>
     <div *ngIf="!any">
       <div class="min-time-example">
-        <input placeholder="starting at" [ngxTimepicker]="min" [min]="" name="startTime" [(ngModel)]="startTime" [format]=24  readonly hourSelected="hourSelected()">
+        <input placeholder="starting at" [ngxTimepicker]="min" [min]="" name="startTime" [(ngModel)]="startTime" [format]=24  required>
         <ngx-material-timepicker #min ></ngx-material-timepicker>
       </div>
 
       <div class="max-time-example">
-        <input placeholder="Ending at" [ngxTimepicker]="max"  name="endTime" [(ngModel)]="endTime" [format]=24 minutesGap="15" [max]="" readonly>
+        <input placeholder="Ending at" [ngxTimepicker]="max"  name="endTime" [(ngModel)]="endTime" [format]=24 minutesGap="15" required>
         <ngx-material-timepicker #max></ngx-material-timepicker>
       </div>
     </div>

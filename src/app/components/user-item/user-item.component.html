@@ -1,41 +1,53 @@
 <div class="user-container">
 
-  <div class="user-header">
-
-    <h4>
-      <mat-icon class="icon">account_circle</mat-icon>
-      {{user.name}}
-      <mat-icon class="icon">edit</mat-icon>
-    </h4>
+  <div class="user-header" (click)="toggleMoreInfo(user)">
+    <mat-icon class="icon account-icon">account_circle</mat-icon>
+    <div class="user-name">
+      <h5>{{user.name}}</h5>
+    </div>
 
     <div class="show-more-info">
-      <div class="link" (click)="toggleMoreInfo(user)" *ngIf="!moreInfoVisible">
-        Show more informatios <mat-icon class="icon">expand_more</mat-icon>
+      <div class="link" *ngIf="!moreInfoVisible">
+        <mat-icon class="icon">expand_more</mat-icon>
       </div>
-
-      <div class="link" (click)="toggleMoreInfo(user)" *ngIf="moreInfoVisible">
-        Hide informations <mat-icon class="icon">expand_less</mat-icon>
+      <div class="link" *ngIf="moreInfoVisible">
+        <mat-icon class="icon">expand_less</mat-icon>
       </div>
     </div>
   </div>
 
   <div *ngIf="moreInfoVisible" class="more-info">
-    <span>
-      <h5>Email address</h5>
-      <mat-icon class="icon">email</mat-icon> {{user.email}}
-    </span>
 
-    <h5>Work hours</h5>
-    <span *ngIf="user.any">any hours</span>
-    <span *ngIf="!user.any">
-      start: {{user.startTime}}
-      end: {{user.endTime}}
-    </span>
+    <div class="user-basic-info">
+
+      <div class="user-info-row">
+        <div class="user-email">
+          <mat-icon class="icon">email</mat-icon> {{user.email}}
+        </div>
+      </div>
+
+      <div class="user-working-hours">
+        <div class="user-info-row">
+          <mat-icon class="icon">access_time</mat-icon>
+          Working hours
+        </div>
+
+        <span *ngIf="user.any">any hours</span>
+        <span *ngIf="!user.any">
+          start: {{user.startTime}}
+          end: {{user.endTime}}
+        </span>
+
+      </div>
+    </div>
+
+
     <div class="technologies-container">
       <app-technologies-item *ngFor="let technology of technologies" [technology]="technology">
       </app-technologies-item>
     </div>
-  </div>
 
+    <mat-icon class="icon">edit</mat-icon>
+  </div>
 
 </div>

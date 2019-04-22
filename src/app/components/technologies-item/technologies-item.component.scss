@@ -1,23 +1,25 @@
+@import '../../styles/variables.scss';
 
-.technology-container{
-    display: flex;
-    flex-direction:row;
-    padding:6px;
-    margin:4px;
-    border-radius:8px;
-    
-    .technology{
+.technology-container {
+  display: flex;
+  flex-direction: row;
+  padding: 6px;
+  margin: 4px;
+  border-radius: 8px;
 
-    }
+  .technology {
+    color: $almost-white;
 
-    .remove-technology{
-        display:block;
-        outline:none;
-        border: none;
+  }
+
+  .remove-technology {
+    display: block;
+    outline: none;
+    border: none;
     margin: 0;
     padding: 0;
-    height:100%;
+    height: 100%;
     overflow: visible;
-     
-    }
+
+  }
 }

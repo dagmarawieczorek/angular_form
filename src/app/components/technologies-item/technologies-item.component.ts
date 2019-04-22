@@ -10,7 +10,7 @@ import { Component, OnInit, Input, EventEmitter, Output, Injectable} from '@angu
   providedIn: 'root'
 }) 
 
-export class TechnologiesListComponent implements OnInit {
+export class TechnologiesItemComponent implements OnInit {
   @Input() technology:String;
   @Input() removable: Boolean;
   @Output() removeTechnologyItem: EventEmitter<any> = new EventEmitter;

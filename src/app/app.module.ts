@@ -12,7 +12,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { UserViewComponent } from './components/user-list/user-view/user-view.component';
 import { UserItemComponent } from './components/user-item/user-item.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
-import { TechnologiesListComponent } from './components/technologies-item/technologies-item.component';
+import { TechnologiesItemComponent } from './components/technologies-item/technologies-item.component';
 
 
 @NgModule({
@@ -22,7 +22,7 @@ import { TechnologiesListComponent } from './components/technologies-item/techno
     UserViewComponent,
     UserItemComponent,
     AddUserComponent,
-    TechnologiesListComponent,
+    TechnologiesItemComponent,
   ],
   imports: [
     BrowserModule,

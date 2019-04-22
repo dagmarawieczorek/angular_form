@@ -1,16 +1,7 @@
-$text: #333;
-$grey-dark: grey;
-$grey-light: #ccc;
-$primary: #257474;
-$title-weight:normal;
-$link: #ff6200;
-$success:green;
-$info:#51bcec;
-$danger:red;
-$almost-white: rgb(229, 229, 226);
-
-
+@import './app/styles/variables.scss';
 *{
+
+    
     color: $text;
     padding: 0;
     margin: 0;

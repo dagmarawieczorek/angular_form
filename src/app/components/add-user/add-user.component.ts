@@ -1,16 +1,17 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
-import { Observable } from 'rxjs'
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { User, PreferableHour } from '../models/Users'
 
 @Component({
   selector: 'app-add-user',
   templateUrl: './add-user.component.html',
   styleUrls: ['./add-user.component.scss']
 })
+
 export class AddUserComponent implements OnInit {
 
-  @Output() addUser: EventEmitter<any> = new EventEmitter;
+  @Output() addUser: EventEmitter<User> = new EventEmitter;
 
   name: string;
   email: string;
@@ -19,8 +20,8 @@ export class AddUserComponent implements OnInit {
   endTime: string;
   any: boolean = false;
   private userTechnologies: Array<string> = [];
-
   startHour = new NgxMaterialTimepickerModule
+
   constructor() {
   }
 
@@ -29,17 +30,18 @@ export class AddUserComponent implements OnInit {
 
   onSubmit() {
     if (this.validate()) {
-      let user = {
-        name: this.name,
-        email: this.email,
-        dailyHours: this.dailyHours,
-        startTime: this.startTime,
-        endTime: this.endTime,
-        technologies: this.userTechnologies,
-        any: this.any,
-      }
-      this.addUser.emit(user)
+      let preferableHour = new PreferableHour();
+      let user = new User()
 
+      user.name = this.name,
+        user.email = this.email,
+        user.dailyHours = this.dailyHours,
+        user.technologies = this.userTechnologies,
+        preferableHour.any = this.any,
+        preferableHour.start = this.startTime,
+        preferableHour.end = this.endTime,
+
+        this.addUser.emit(user)
     }
   }
 
@@ -62,8 +64,8 @@ export class AddUserComponent implements OnInit {
     if (this.userTechnologies.length === 0) {
       alert("DODAJ TECHNOLOGIE")
       return false;
-    } 
-    
+    }
+
     if (!this.validateTimes()) {
       alert("NIE TE GODZINY")
       return false;

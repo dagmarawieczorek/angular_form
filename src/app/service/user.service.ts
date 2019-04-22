@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, } from '@angular/common/http';
-import { Users } from '../components/models/Users';
+import { User } from '../components/models/Users';
 import { Observable } from 'rxjs'
 
 const httpOptions= {
@@ -19,11 +19,11 @@ export class UserService {
   constructor(private http:HttpClient) {
   }
 
-  getUsers(): Observable<Users[]> {
-    return this.http.get<Users[]>(this.usersUrl);
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>(this.usersUrl);
   }
 
-  addUser(user:Users){
-    return this.http.post<Users>(this.usersUrl, user, httpOptions )
+  addUser(user:User){
+    return this.http.post<User>(this.usersUrl, user, httpOptions )
   }
 }
