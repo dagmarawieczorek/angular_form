@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter, Output, Injectable} from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-technologies-item',
@@ -8,10 +8,10 @@ import { Component, OnInit, Input, EventEmitter, Output, Injectable} from '@angu
 
 @Injectable({
   providedIn: 'root'
-}) 
+})
 
 export class TechnologiesItemComponent implements OnInit {
-  @Input() technology:String;
+  @Input() technology: String;
   @Input() removable: Boolean;
   @Output() removeTechnologyItem: EventEmitter<any> = new EventEmitter;
 
@@ -20,10 +20,10 @@ export class TechnologiesItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  removeTechnology(event){
+  removeTechnology(event) {
     event.preventDefault();
-   this.removeTechnologyItem.emit(this.technology)
-    
+    this.removeTechnologyItem.emit(this.technology)
+
   }
 
 }

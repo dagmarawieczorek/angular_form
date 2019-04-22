@@ -15,7 +15,7 @@ import { MatSnackBar } from '@angular/material';
 
 export class AddUserComponent implements OnInit {
 
-  @Input() title: string;
+  @Input() title: string = "Add new user";
   @Input() editableUser: User;
   @Output() userUpdated: EventEmitter<User> = new EventEmitter;
 

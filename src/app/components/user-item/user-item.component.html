@@ -1,63 +1,61 @@
 <div class="user-container">
-  
-    <div *ngIf="!editMode">
-  <div class="user-header" (click)="toggleMoreInfo()">
-    <mat-icon class="icon account-icon">account_circle</mat-icon>
-    <div class="user-name">
-      <h5>{{user.name}}</h5>
+
+  <div *ngIf="!editMode">
+    <div class="user-header" (click)="toggleMoreInfo()">
+      <mat-icon class="icon account-icon">account_circle</mat-icon>
+      <div class="user-name">
+        <h5>{{user.name}}</h5>
+      </div>
+
+      <div class="show-more-info">
+        <div class="link" *ngIf="!moreInfoVisible">
+          <mat-icon class="icon">expand_more</mat-icon>
+        </div>
+        <div class="link" *ngIf="moreInfoVisible">
+          <mat-icon class="icon">expand_less</mat-icon>
+        </div>
+      </div>
     </div>
 
-    <div class="show-more-info">
-      <div class="link" *ngIf="!moreInfoVisible">
-        <mat-icon class="icon">expand_more</mat-icon>
+    <div *ngIf="moreInfoVisible" class="more-info">
+      <div class="user-basic-info">
+
+        <div class="user-info-row">
+          <div class="user-email">
+            <mat-icon class="icon">email</mat-icon>
+            <span>{{user.email}}</span>
+          </div>
+        </div>
+
+        <div class="user-info-row">
+          <div class="user-working-hours">
+            <mat-icon class="icon">access_time</mat-icon>
+            <span>Working hours: {{user.dailyHours}}</span>
+          </div>
+        </div>
+
+        <div class="hours-start-end">
+          <span *ngIf="user.preferableHours.any">any hours</span>
+          <div *ngIf="!user.preferableHours.any">
+            <span>
+              {{user.preferableHours.start}} -
+              {{user.preferableHours.end}}
+            </span>
+          </div>
+        </div>
       </div>
-      <div class="link" *ngIf="moreInfoVisible">
-        <mat-icon class="icon">expand_less</mat-icon>
+
+      <div class="technologies-container">
+        <app-technologies-item *ngFor="let technology of user.technologies" [technology]="technology">
+        </app-technologies-item>
       </div>
+
+      <mat-icon class="icon edit" (click)="toggleEditMode()">edit</mat-icon>
     </div>
   </div>
 
-  <div *ngIf="moreInfoVisible" class="more-info">
-    <div class="user-basic-info">
-
-      <div class="user-info-row">
-        <div class="user-email">
-          <mat-icon class="icon">email</mat-icon>
-          <span>{{user.email}}</span>
-        </div>
-      </div>
-
-      <div class="user-info-row">
-        <div class="user-working-hours">
-          <mat-icon class="icon">access_time</mat-icon>
-          <span>Working hours: {{user.dailyHours}}</span>
-        </div>
-      </div>
-
-      <div class="hours-start-end">
-        <span *ngIf="user.preferableHours.any">any hours</span>
-        <div *ngIf="!user.preferableHours.any">
-          <span>
-            {{user.preferableHours.start}} -
-            {{user.preferableHours.end}}
-          </span>
-        </div>
-      </div>
-    </div>
-
-    <div class="technologies-container">
-      <app-technologies-item *ngFor="let technology of user.technologies" [technology]="technology">
-      </app-technologies-item>
-    </div>
-
-    <mat-icon class="icon edit" (click)="toggleEditMode()">edit</mat-icon>
+  <div *ngIf="editMode">
+    <app-add-user title="Edit user" [editableUser]="user" (userUpdated)="userUpdated()"></app-add-user>
   </div>
-</div>
-
-<div *ngIf="editMode">
-  <app-add-user title="Edit user"
-  [editableUser]="user"
-  (userUpdated)="userUpdated()"></app-add-user>
-</div>
 
 </div>

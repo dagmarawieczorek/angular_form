@@ -1,21 +1,20 @@
 .add-user-containter {
-    padding: 18px;
-    .form{
-        display: flex;
-        flex-direction:column;
-        margin: 16px;
+  padding: 18px;
 
-        input{
-            padding:8px;
-            margin:4px;
-            border-radius:8px;
-        }
+  .form {
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+
+    input {
+      padding: 8px;
+      margin: 4px;
+      border-radius: 8px;
     }
+  }
 }
 
-.technologies-container{
-    display:flex;
-    flex-direction: row;
+.technologies-container {
+  display: flex;
+  flex-direction: row;
 }
-
-

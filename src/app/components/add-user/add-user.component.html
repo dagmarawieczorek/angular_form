@@ -9,14 +9,12 @@
     <input type="number" id="dailyHours" name="dailyHours" [(ngModel)]="dailyHours" min="1" max="10"
       placeholder="daily hours" required>
 
-      <h4>Technologies</h4>
+    <h4>Technologies</h4>
     <input type="string" minlength="" #technologies name="technologies" placeholder="add technology and press space"
       (keyup.space)="onSpace($event)">
     <div class="technologies-container">
-      <app-technologies-item removable={{true}}
-      *ngFor="let technology of userTechnologies"
-      [technology]="technology"
-      (removeTechnologyItem)="removeTechnologyItem($event)">
+      <app-technologies-item removable={{true}} *ngFor="let technology of userTechnologies" [technology]="technology"
+        (removeTechnologyItem)="removeTechnologyItem($event)">
       </app-technologies-item>
     </div>
 
@@ -27,12 +25,14 @@
     </div>
     <div *ngIf="!any">
       <div class="min-time-example">
-        <input placeholder="starting at" [ngxTimepicker]="min" [min]="" name="startTime" [(ngModel)]="startTime" [format]=24  required>
-        <ngx-material-timepicker #min ></ngx-material-timepicker>
+        <input placeholder="starting at" [ngxTimepicker]="min" [min]="" name="startTime" [(ngModel)]="startTime"
+          [format]=24 required>
+        <ngx-material-timepicker #min></ngx-material-timepicker>
       </div>
 
       <div class="max-time-example">
-        <input placeholder="Ending at" [ngxTimepicker]="max"  name="endTime" [(ngModel)]="endTime" [format]=24 minutesGap="15" required>
+        <input placeholder="Ending at" [ngxTimepicker]="max" name="endTime" [(ngModel)]="endTime" [format]=24
+          minutesGap="15" required>
         <ngx-material-timepicker #max></ngx-material-timepicker>
       </div>
     </div>

@@ -19,25 +19,26 @@
       align-content: center;
 
       .icon {
-         font-size:24px;
-         margin: 16px 16px 0 0;
+        font-size: 24px;
+        margin: 16px 16px 0 0;
       }
     }
 
-    .hours-start-end{
+    .hours-start-end {
       font-weight: bolder;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       margin: 0 0 0 48px;
-      span{
-      color: $primary;
+
+      span {
+        color: $primary;
         padding: 4px;
       }
     }
 
-    .user-basic-info{
-        flex: 2;
+    .user-basic-info {
+      flex: 2;
     }
 
     .technologies-container {
@@ -93,6 +94,6 @@
   }
 }
 
-.edit{
+.edit {
   cursor: pointer;
 }
