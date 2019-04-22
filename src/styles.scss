@@ -1,32 +1,53 @@
 @import './app/styles/variables.scss';
-*{
 
-    
-    color: $text;
-    padding: 0;
-    margin: 0;
-    font-family: 'Helvetica', 'Arial', sans-serif;
-}
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-
-.grid{
-    width: 1200px
+* {
+  color: $text;
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
-.btn{
-    background: $primary;
-    color: $almost-white; 
+html,
+body {
+  height: 100%;
 }
 
-.icon{
-    color: $primary;
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.link{
-    display:block;
-    color: $primary;
-    font-size:16px;
-    cursor: pointer;
+.grid {
+  width: 1200px
+}
+
+.btn {
+  background: $primary;
+  color: $almost-white;
+  padding: 8px;
+  margin: 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  max-width:150px;
+}
+
+.icon {
+  color: $primary;
+}
+
+.link {
+  display: block;
+  color: $primary;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+h2 {
+  padding: 8px;
+  color: $secondary;
+}
+
+h4 {
+  padding: 16px;
 }

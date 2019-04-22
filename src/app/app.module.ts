@@ -5,24 +5,25 @@ import {FormsModule} from '@angular/forms';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserListComponent } from './components/user-list/user-list.component';
-import { UserViewComponent } from './components/user-list/user-view/user-view.component';
 import { UserItemComponent } from './components/user-item/user-item.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { TechnologiesItemComponent } from './components/technologies-item/technologies-item.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
-    UserViewComponent,
     UserItemComponent,
     AddUserComponent,
     TechnologiesItemComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +32,8 @@ import { TechnologiesItemComponent } from './components/technologies-item/techno
     FormsModule,
     NgxMaterialTimepickerModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

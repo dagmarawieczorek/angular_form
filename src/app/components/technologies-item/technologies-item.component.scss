@@ -3,23 +3,26 @@
 .technology-container {
   display: flex;
   flex-direction: row;
-  padding: 6px;
+  padding: 8px;
   margin: 4px;
   border-radius: 8px;
 
   .technology {
     color: $almost-white;
-
   }
 
   .remove-technology {
     display: block;
     outline: none;
+    background: $primary;
+    color: $almost-white;
+    cursor: pointer;
     border: none;
-    margin: 0;
-    padding: 0;
+    padding: 0 0 0 16px;
     height: 100%;
     overflow: visible;
+    border-radius: 50%;
+    font-size: 22px;
 
   }
 }

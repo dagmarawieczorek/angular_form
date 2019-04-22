@@ -9,26 +9,31 @@
   }
 
   .more-info {
-    padding: 26px;
+    padding: 16px 16px 36px 16px;
     display: flex;
     flex-direction: row;
 
     .user-info-row {
-      border: 1px solid red;
+      padding: 4px;
       display: flex;
+      align-content: center;
 
+      .icon {
+         font-size:24px;
+         margin: 16px 16px 0 0;
+      }
+    }
 
-      //   .user-hours {
-      //     border: 1px solid blue;
-      //     display: flex;
-      //     align-items: flex-start;
-      //     flex-direction: column;
-
-      //     .user-hours-header {
-      //       display: flex;
-      //       flex-direction: row;
-      //     }
-      //   }
+    .hours-start-end{
+      font-weight: bolder;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0 0 0 48px;
+      span{
+      color: $primary;
+        padding: 4px;
+      }
     }
 
     .user-basic-info{
@@ -45,8 +50,6 @@
   }
 
 }
-
-
 
 .user-header {
   cursor: pointer;
@@ -77,8 +80,6 @@
     justify-content: flex-start;
     align-items: center;
   }
-
-
 }
 
 .link {
@@ -90,4 +91,8 @@
   .icon {
     font-size: 24px;
   }
+}
+
+.edit{
+  cursor: pointer;
 }

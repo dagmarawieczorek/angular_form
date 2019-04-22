@@ -1,0 +1,15 @@
+@import '../app/styles/variables.scss';
+
+.container{
+
+ .navigation{
+    background: $secondary;
+    padding: 10px;
+ }
+
+ .grid {
+    max-width: 1140px;
+    margin: 0 auto;
+   padding: 15px;
+ }
+}

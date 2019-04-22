@@ -1,0 +1,129 @@
+{
+  "users": [
+    {
+      "name": "Bebzik Bebzik3",
+      "email": "bebzik2@gmail.com",
+      "dailyHours": 5,
+      "technologies": [
+        "java",
+        "dsadsa "
+      ],
+      "preferableHours": {
+        "any": false,
+        "start": "12:30",
+        "end": "17:30"
+      },
+      "id": 1
+    },
+    {
+      "name": "Bebzik Toster2",
+      "email": "bebzik2@gmail.com",
+      "dailyHours": 7,
+      "technologies": [
+        "java",
+        "tes "
+      ],
+      "preferableHours": {
+        "any": false,
+        "start": "12:30",
+        "end": "19:30"
+      },
+      "id": 2
+    },
+    {
+      "name": "Dagmara Wieczorek",
+      "email": "dagmara.wieczorek7@gmail.com",
+      "dailyHours": 2,
+      "technologies": [
+        "sadsa ",
+        "sadasdsa "
+      ],
+      "preferableHours": {
+        "any": false,
+        "start": "13:00",
+        "end": "15:00"
+      },
+      "id": 3
+    },
+    {
+      "name": "adsada",
+      "email": "Aaa@wp.pl",
+      "dailyHours": 2,
+      "technologies": [
+        "adsadsa "
+      ],
+      "preferableHours": {
+        "any": true
+      },
+      "id": 4
+    },
+    {
+      "name": "adsadsa",
+      "email": "asd@wp.pl",
+      "dailyHours": 2,
+      "technologies": [
+        "a d",
+        "sa "
+      ],
+      "preferableHours": {
+        "any": true
+      },
+      "id": 5
+    },
+    {
+      "name": "asdsaasdsa",
+      "email": "asdsa@wp.pl",
+      "dailyHours": 2,
+      "technologies": [
+        "asdasdas "
+      ],
+      "preferableHours": {
+        "any": true,
+        "start": "12:00",
+        "end": "18:00"
+      },
+      "id": 6
+    },
+    {
+      "name": "Dagmara Wieczorek",
+      "email": "dagmara.wieczorek7@gmail.com",
+      "dailyHours": 1,
+      "technologies": [
+        "asdasd ",
+        "sdas "
+      ],
+      "preferableHours": {
+        "any": true
+      },
+      "id": 7
+    },
+    {
+      "name": "Ziemior",
+      "email": "aa@wp.pl",
+      "dailyHours": 1,
+      "technologies": [
+        "aa ",
+        "bb ",
+        "cc "
+      ],
+      "preferableHours": {
+        "any": true
+      },
+      "id": 8
+    },
+    {
+      "name": "Batacik",
+      "email": "aa@wp.pl",
+      "dailyHours": 2,
+      "technologies": [
+        "gg "
+      ],
+      "preferableHours": {
+        "any": true,
+        "start": "12:00",
+        "end": "14:00"
+      },
+      "id": 9
+    }
+  ]
+}

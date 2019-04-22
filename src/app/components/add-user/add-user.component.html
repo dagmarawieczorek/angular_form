@@ -1,15 +1,15 @@
 <div class="add-user-containter">
-  <h2>Add new user</h2>
-  <form class="form" (ngSubmit)="onSubmit()" ngNativeValidate>
-    <h5>Name</h5>
+  <h2>{{title}}</h2>
+  <form class="form" (ngSubmit)="onSubmit()" class="form" ngNativeValidate>
+    <h4>Name</h4>
     <input type="text" id="name" name="name" minlength="6" [(ngModel)]="name" placeholder="add name" required>
 
-    <h5>Email</h5>
+    <h4>Email</h4>
     <input type="email" id="email" name="email" email="true" [(ngModel)]="email" placeholder="email" required>
     <input type="number" id="dailyHours" name="dailyHours" [(ngModel)]="dailyHours" min="1" max="10"
       placeholder="daily hours" required>
 
-      <h5>Technologies</h5>
+      <h4>Technologies</h4>
     <input type="string" minlength="" #technologies name="technologies" placeholder="add technology and press space"
       (keyup.space)="onSpace($event)">
     <div class="technologies-container">
@@ -20,7 +20,7 @@
       </app-technologies-item>
     </div>
 
-    <h5>Prefered working hours</h5>
+    <h4>Prefered working hours</h4>
     <div class="checkbox">
       <input type="checkbox" id="anyHours" name="any" [(ngModel)]="any">
       <label>any hours</label>

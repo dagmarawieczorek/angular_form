@@ -6,7 +6,7 @@ export class User {
     email: string;
     dailyHours: number;
     technologies: Array<string>;
-    preferableHours : Array<PreferableHour>
+    preferableHours : PreferableHour;
 }
 
 export class PreferableHour{

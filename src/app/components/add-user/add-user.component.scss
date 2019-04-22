@@ -1,8 +1,9 @@
 .add-user-containter {
-    border:1px solid #000;
-    form{
+    padding: 18px;
+    .form{
         display: flex;
         flex-direction:column;
+        margin: 16px;
 
         input{
             padding:8px;
